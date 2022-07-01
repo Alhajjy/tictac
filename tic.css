@@ -1,0 +1,115 @@
+:root{
+    background: rgb(0, 0, 0);
+}
+.game{
+    width: 255px;
+    text-align: center;
+    font-family: system-ui;
+    margin: auto;
+    font-weight: 500;
+    /* position: absolute; */
+    
+}
+.title{
+    background: #f25;
+    padding: 5px 0;
+    margin: 5px 0;
+    animation: infinite;
+    animation-name: forTitle;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-direction: reverse;
+}
+@keyframes forTitle {
+    0% {
+        background: rgb(42, 25, 194);
+    }
+    25% {
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        transform: rotate(10deg) skewX(200deg);
+    }
+    50% {
+        background: rgb(0, 255, 4);
+        border-radius: 0px;
+        /* transform: skewX(200deg); */
+    }
+    75% {
+        background: purple;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 30px;
+        transform: rotate(-10deg) skewX(200deg);
+    }
+    100% {
+        background: rgb(42, 25, 194);
+    }
+}
+/* .title:hover{
+    transform: skewX(200deg);
+    background: rgb(0, 255, 26);
+    animation-name: forTitle
+} */
+span{
+    color: #FA0;
+}
+.square{
+    width: 75px;
+    height: 75px;
+    background: rgb(27, 0, 107);
+    float: left;
+    margin: 2px;
+    font-size: 50px;
+    transition-duration: 0s;
+    border-radius: 50%;
+    border: 3px dotted red;
+    animation: infinite;
+    animation-name: places;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+
+}
+@keyframes places {
+    0% {
+        /* transform: rotate(20deg) */
+    }
+    20% {
+        /* transform: rotate(20deg) */
+    }
+    40% {
+        /* transform: rotate(80deg) */
+    }
+    50% {
+        transform:  skewY(9deg) rotate(300deg);
+        background: rgb(7, 235, 7);
+    }
+    80% {
+        /* transform: rotate(40deg) */
+    }
+    100% {
+        /* transform: rotate(deg) */
+    }
+}
+.square:hover{
+    background: #59d0ff;
+    color: rgb(51, 3, 37);
+    cursor: pointer;
+    transform: rotate(410deg) scale(110%);
+    border: 3px dashed red;
+}
+.restart {
+    width: 60%;
+    height: 50%;
+    position: relative;
+    top: 20%;
+    left: 20%;
+    text-align: center;
+    border-radius: 30px;
+    display: inline-block;
+    background: red;
+    color: white;
+    text-decoration: none;
+    margin-top: 50px;
+}
